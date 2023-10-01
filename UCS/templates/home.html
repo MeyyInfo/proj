@@ -1,0 +1,829 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<!-- banner -->
+<div class="modal fade" id="sign-out">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Want to leave?</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                Press logout to leave
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Stay Here</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Logout</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<noscript>
+    <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+            <div class="p-3 text-center"  style="border:solid 1px red; margin-top:100px">
+                <h3 class="text-danger font-weight-bold"> O Javascript está desabilitado. Favor habilitar para melhor funcionamento do sistema.</h3>
+                <p class="text-black-50 text-c">Para habilitar, no navegador, precionsar <kbd>Alt</kbd> e <kbd>F</kbd>, ir em Configurações / Configurações de segurança / Permissões do site / Javascript (Google Chrome).</p>
+                <p class="text-black-50">Para habilitar, no navegador, precionsar <kbd>Alt</kbd> e <kbd>F</kbd>, ir em Configurações / Cookies e permissões de site / Javascript (Microsof Edge).</p>
+            </div>
+        </div>
+    </div>
+</noscript>
+
+
+
+
+<section class="bg-light" id="vegetarianas">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+
+
+
+                <!-------------------------- CUPCAKES DE MORANGO ------------------------------------->
+                <!-- Título -->
+                <div class="row mt-5" >
+                    <div class="col text-center py-5 mt-5">
+                        <h1 class="text-uppercase font-italic common-title">Os melhores Cupcakes de morango</h1>
+                    </div>
+                </div>
+                <!-- Fim Título -->
+
+
+                <div class="row  align-items-end justify-content-center mx-auto">
+
+
+
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                               <!-- <img src="/static/img/mora1.jpg" class="img-thumbnail"> -->
+                                <img src="{{ url_for('static', filename='img/mora1.jpeg') }}" class="img-thumbnail" width="400" height="600">
+
+                            </div>
+
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 1</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                               <!-- <img src="/static/img/Veg-2-400x600.jpg" class="img-thumbnail"> -->
+                                 <img src="{{ url_for('static', filename='img/mora2.jpeg') }}" class="img-thumbnail" width="400" height="600">
+                            </div>
+
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 2</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <!-- <img src="/static/img/Veg-3-400x600.jpg" class="img-thumbnail"> -->
+                                <img src="{{ url_for('static', filename='img/mora3.jpeg') }}" class="img-thumbnail" width="400" height="600">
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 3</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <!-- <img src="/static/img/Veg-4-400x600.jpg" class="img-thumbnail"> -->
+                                <img src="{{ url_for('static', filename='img/mora4.jpeg') }}" class="img-thumbnail" width="400" height="600">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 4</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--VEGETARIANAS-->
+
+                <div class="row py-5 align-items-end justify-content-center mx-auto">
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <!-- <img src="/static/img/Veg-5-400x600.jpg" class="img-thumbnail"> -->
+                                <img src="{{ url_for('static', filename='img/mora5.jpeg') }}" class="img-thumbnail" width="400" height="600">
+
+                            </div>
+
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success font-italic"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 5</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <!-- <img src="/static/img/Veg-6-400x600.jpg" class="img-thumbnail"> -->
+                                <img src="{{ url_for('static', filename='img/mora6.jpeg') }}" class="img-thumbnail" width="400" height="600">
+
+                            </div>
+
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 6</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <!-- <img src="/static/img/Veg-7-400x600.jpg" class="img-thumbnail"> -->
+                                 <img src="{{ url_for('static', filename='img/mora7.jpeg') }}" class="img-thumbnail" width="400" height="600">
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 7</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <!--TRADICIONAIS-->
+                <!-- Título -->
+                <div class="row" id="tradicionais">
+                    <div class="col text-center py-5">
+                        <h1 class="text-uppercase font-italic common-title">Saborosos Cupcakes tradicionais</h1>
+                    </div>
+                </div>
+                <!-- Fim Título -->
+
+
+
+                <div class="row align-items-end justify-content-center mx-auto">
+
+
+
+
+
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad1.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 8</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad2.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 9</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad3.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 10</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad4.jpeg" class="img-thumbnail">
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 11</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <!--TRADICIONAIS-->
+
+                <div class="row pt-md-5 mt-md-3 mb-5 align-items-end justify-content-center mx-auto">
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad5.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 12</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad6.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 13</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad7.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 14</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad8.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 15</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--TRADICIONAIS-->
+
+                <div class="row pt-md-5 mt-md-3 mb-5 align-items-end justify-content-center mx-auto">
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad9.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 16</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad10.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 17</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad11.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 18</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad12.jpg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 19</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <!--TRADICIONAIS-->
+
+                <div class="row pt-md-5 mt-md-3 mb-5 align-items-end justify-content-center mx-auto">
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad13.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 20</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad14.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Cupcake 21</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad15.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Pizza 1</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/trad16.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Pizza 22</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <!--DOCES-->
+                <!-- Título -->
+                <div class="row" id="doces">
+                    <div class="col text-center py-5 titulo-pizzas">
+                        <h1 class="text-uppercase font-italic common-title">Inesquecíveis CupCakes de chocolate</h1>
+                    </div>
+                </div>
+                <!-- Fim Título -->
+
+
+
+
+                <div class="row  align-items-end justify-content-center pb-5 mx-auto">
+
+
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/choco1.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Pizza 23</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/choco2.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Pizza 24</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+
+                            <div class="card-header">
+                                <img src="/static/img/choco3.jpeg" class="img-thumbnail">
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart fa-3x text-warning"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5 class="text-success"><i>Delivery</i></h5>
+                                        <h3>R$ 00,00</h3>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary mx-0">
+                                    <i class="fas fa-syne mr-3"></i>
+                                    <span class="text-justify"><b>Pizza 25</b> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</section>
+<!-- end of cards -->
+
+<!-- end of cards -->
+<!--Tables-->
+
+
+
+
+
+
+
+
+
+{% endblock %}

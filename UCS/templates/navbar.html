@@ -1,0 +1,93 @@
+
+
+
+        <nav class="navbar navbar-expand-md navbar-light">
+            <button class="navbar-toggler ms-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <!------------------------------------------------------- sidebar ------------------------------------------------------------------------------>
+
+                        <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+
+                            <p class="navbar-brand font-weight-bold text-danger d-block mx-auto text-center py-4 mb-4 bottom-border">LOLITA CUPCAKE</p>
+                            <div class="bottom-border pb-3">
+                               <!-- <img src="/static/img/mini.jpg" width="50" class="rounded-circle mr-3"> -->
+                                <img src="{{ url_for('static', filename='img/mini.jpeg') }}" class="rounded-circle mr-3" width="50">
+
+                                <p class="text-white d-inline-block">Cupcakes</p>
+
+                            </div>
+                            <ul class="navbar-nav flex-column mt-4">
+                                <li class="nav-item"><a href="#vegetarianas" class="nav-link text-white p-2 mb-2 current"><i class="fas fa-home text-light fa-lg mr-3"></i>Todos os Cupcakes</a></li>
+
+                                <li class="nav-item"><a href="#vegetarianas" class="nav-link text-white p-2 mb-2 sidebar-link"><i class="fas fa-regular fa-heart text-success fa-lg mr-3"></i> Morango</a></li>
+
+
+                                <li class="nav-item"><a href="#tradicionais" class="nav-link text-white p-2 mb-2 sidebar-link"><i class="fas fa-regular fa-heart text-light fa-lg mr-3"></i> Tradicionais</a></li>
+
+                                <li class="nav-item"><a href="#doces" class="nav-link text-white p-2 mb-2 sidebar-link"><i class="fas fa-regular fa-heart text-danger fa-lg mr-3"></i> Chocolate</a></li>
+
+
+
+                                <li class="nav-item"><a asp-controller="Logins" asp-action="Index" class="nav-link text-white p-2 mb-2 sidebar-link-entrar"><i class="fas fa-file-alt text-light fa-lg mr-3"></i> Entrar</a></li>
+
+
+
+
+
+                            </ul>
+                        </div>
+
+                        <!------------------------------------------------------- sidebar ------------------------------------------------------------------------------>
+                        <!------------------------------------------------------- top-nav ------------------------------------------------------------------------------>
+
+                        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto fixed-top py-2 top-navbar" style="background:#264653;">
+
+                            <div class="row align-items-center">
+                                <div class="col-xl-2 col-lg-4 col-md-2">
+                                    <a class="h5 font-weight-normal text-danger mb-0 p-2 d-inline-block" style="text-decoration:none;" >Lolita Cupcake</a>
+                                </div>
+
+                                <div class="col-xl-8 col-lg-5 col-md-6 ml-auto">
+                                    <ul class="navbar-nav">
+                                       <!-- @*<li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fas fa-comments text-muted fa-lg"></i></a></li>
+                                          <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fas fa-bell text-muted fa-lg"></i></a></li>*@ -->
+
+
+                                         <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold px-3"><i class="fas fa-phone-alt fa-2x mx-1 text-success" style="color: #a8dadc"></i></a></li>
+
+                                        <!-- Inserir celular para testar -->
+                                        <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold px-3" style="color: #f1faee" >(11) XXXXX-XXXX</a></li>
+
+                                        <li title="WhatsApp" class="nav-item p-2">
+                                            <a href="https://wa.me/5511XXXXXXXXX" target="_blank" class="text-success" style="text-decoration:none;">
+                                                <i class="fab fa-whatsapp text-success fa-2x mr-3"></i><i></i>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li title="Entrar" class="nav-item ml-md-auto p-2"><a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------------------------------------------- end of top-nav ------------------------------------------------------------------------------>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+
+
