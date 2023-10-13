@@ -1,0 +1,128 @@
+{% extends 'shared/base.html' %}
+
+{% block body %}
+
+<!--
+
+<section class="p-2 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mx-auto" style="height:100vh;">
+            <div class="col-sm-12 col-md-11 col-lg-10 mx-auto" style="margin-top:120px;">
+
+
+                    &lt;!&ndash; title &ndash;&gt;
+                            <div class="text-center mb-4">
+                                <h1 class="display-2 texth1">Lista de Contatos</h1>
+                            </div>
+                    &lt;!&ndash; end of title&ndash;&gt;
+
+
+                <form role="search">
+                    <div class="row mb-3">
+                                <div class="col-4 form-group">
+                                    <label for="minDate">Data mínima</label>
+                                    <input type="date" name="minDate" class="form-control" value="@ViewData["minDate"]" />
+                                </div>
+                                <div class="col-4 form-group">
+                                    <label for="maxDate">Data Máxima</label>
+                                    <input type="date" name="maxDate" class="form-control" value="@ViewData["maxDate"]" />
+                                </div>
+                                <div class="col-4 form-group">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" name="nome" class="form-control" value="@ViewData["nome"]"/>
+                                </div>
+                                <div class="col form-group">
+                                    <div class="d-grid gap-2">
+                                        <button type="submit" class="btn btn-outline-info mt-3">Filtrar</button>
+                                    </div>
+                                </div>
+                    </div>
+                </form>
+
+
+                <div class="table-overflow">
+                    <table class="table table-striped table-hover table-sm">
+                        <thead>
+                            <tr>
+                                             <th>
+                                                {{ form.nome.label(class="form-control-label") }}
+                                            </th>
+                                            <th>
+                                                {{ form.sobrenome.label(class="form-control-label") }}
+                                            </th>
+
+                                            <th>
+                                                {{ form.email.label(class="form-control-label") }}
+                                            </th>
+                                            <th>
+                                                {{ form.telefone.label(class="form-control-label") }}
+                                            </th>
+                                            <th>
+                                                Data de Criação
+                                            </th>
+
+                                            <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in list_contatos %}
+
+                                <tr>
+                                    <td>
+                                        {{ row.nome }}
+                                    </td>
+                                    <td>
+                                        {{ row.sobrenome }}
+                                    </td>
+                                    <td>
+                                        {{ row.email }}
+                                    </td>
+                                    <td>
+                                        {{ row.telefone }}
+                                    </td>
+
+                                    <td>
+                                        {{ row.data_criacao }}
+                                    </td>
+
+                                    <td></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td class="text-black-50 small" colspan="6">Todos os direitos reservados</td>
+                                <td></td>
+
+                            </tr>
+
+                        </tfoot>
+
+
+                    </table>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        <a href="{{url_for('login_index')}}" class="seta-voltar">&larr; Voltar</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+-->
+
+
+
+
+
+
+
+{% endblock %}
+

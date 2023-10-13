@@ -1,0 +1,97 @@
+{% extends 'shared/base.html' %}
+
+{% block body %}
+
+
+<section class="p-2 bg-light">
+    <div class="container">
+        <div class="row justify-content-center mx-auto" style="height:100vh;">
+            <div class="col-sm-12 col-md-11 col-lg-12 mx-auto" style="margin-top:100px;">
+
+
+                <!-- title -->
+                        <div class="text-center">
+                            <h1 class="display-2 texth1">Lista de Acessos</h1>
+                        </div>
+                <!-- end of title-->
+
+                <hr />
+
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <a href="{{url_for('login_create')}}" class="btn btn-outline-info">Criar Acesso</a>
+                    </div>
+                </div>
+
+
+
+                <div class="table-overflow">
+                    <table class="table table-striped table-hover table-sm pr-0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    {{ form.usuario.label(class="form-control-label") }}
+                                </th>
+                                <th>
+                                    {{ form.senha.label(class="form-control-label") }}
+                                </th>
+
+
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           {% for row in list_login  %}
+                                <tr>
+                                    <td class="pr-0">
+                                        {{row.usuario}}
+                                    </td>
+                                    <td class="pr-0">
+                                        {{row.senha}}
+                                    </td>
+
+                                    <td class="pr-0">
+                                        <div class="btn btn-group">
+                                            <a href="{{url_for('login_edit', row_id=row.id)}}" class="btn btn-outline-warning btn-sm">Edit</a>
+                                            <a href="{{url_for('login_delete', row_id=row.id)}}" class="btn btn-outline-danger btn-sm">Delete</a>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                           {% endfor %}
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td class="text-black-50 small" colspan="3">Todos os direitos reservados</td>
+                                <td></td>
+
+                            </tr>
+
+                        </tfoot>
+
+
+                    </table>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col">
+                        <a href="{{url_for('contato_list')}}" class="seta-voltar">&larr; Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

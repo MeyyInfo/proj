@@ -1,0 +1,136 @@
+{% extends 'shared/base.html' %}
+
+{% block body %}
+
+<section class="p-5 bg-light">
+    <div class="container">
+
+        <div class="row justify-content-center mx-auto" style="height: 100vh;">
+            <div class="col-sm-12 col-md-11 col-lg-10 mx-auto">
+
+                <!-- title -->
+                        <div class="text-center mb-4" style="margin-top:100px">
+                            <h1 class="display-2 texth1"  >Criar Usuário</h1>
+                        </div>
+                <!-- end of title-->
+
+
+
+                        <form method="POST" action="" class="text-muted">
+                            {{ form.csrf_token }}
+
+
+                            <div class="row">
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        {{ form.nome.label(class="form-control-label") }}
+                                          {% if form.nome.errors %}
+                                                {{ form.nome(class = "form-control is-invalid") }}
+                                                <div class="invalid-feedback">
+                                                     {% for erro in form.nome.errors %}
+                                                       {{ erro }}
+                                                     {% endfor %}
+                                                </div>
+                                           {% else %}
+                                                     {{ form.nome(class = "form-control") }}
+                                           {% endif %}
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        {{ form.sobrenome.label(class="form-control-label") }}
+                                          {% if form.sobrenome.errors %}
+                                                {{ form.sobrenome(class = "form-control is-invalid") }}
+                                                <div class="invalid-feedback">
+                                                     {% for erro in form.sobrenome.errors %}
+                                                       {{ erro }}
+                                                     {% endfor %}
+                                                </div>
+                                           {% else %}
+                                                     {{ form.sobrenome(class = "form-control") }}
+                                           {% endif %}
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <div class="form-group">
+                                       {{ form.email.label(class="form-control-label") }}
+                                          {% if form.email.errors %}
+                                                {{ form.email(class = "form-control is-invalid") }}
+                                                <div class="invalid-feedback">
+                                                     {% for erro in form.email.errors %}
+                                                       {{ erro }}
+                                                     {% endfor %}
+                                                </div>
+                                           {% else %}
+                                                     {{ form.email(class = "form-control") }}
+                                           {% endif %}
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                      {{ form.telefone.label(class="form-control-label") }}
+                                          {% if form.telefone.errors %}
+                                                {{ form.telefone(class = "form-control is-invalid") }}
+                                                <div class="invalid-feedback">
+                                                     {% for erro in form.telefone.errors %}
+                                                       {{ erro }}
+                                                     {% endfor %}
+                                                </div>
+                                           {% else %}
+                                                     {{ form.telefone(class = "form-control") }}
+                                           {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="form-group">
+                                 <div class="d-grid gap-2 ">
+                                    <!-- {{ form.botao_submit(class="btn btn-outline-success mb-3 mt-3") }} -->
+                                      <input type="hidden" asp-for="Id" />
+                                      <input type="submit" value="Criar" class="btn btn-outline-success mt-3 mb-3" />
+                                 </div>
+                            </div>
+
+
+
+                        </form>
+
+
+
+                        <div class="row mt-4">
+                            <div class="col text-center">
+                                <a href="{{url_for('contato_list')}}" class="seta-voltar">&larr; Voltar</a>
+                            </div>
+                        </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!-- end of contact -->
+
+
+
+
+
+
+
+{% endblock %}
+
+
