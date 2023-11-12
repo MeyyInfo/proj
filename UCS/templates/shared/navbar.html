@@ -9,7 +9,7 @@
                 <div class="container-fluid">
                     <div class="row">
 
-                        <!------------------------------------------------------- sidebar ------------------------------------------------------------------------------>
+ <!------------------------------------------------------- sidebar ------------------------------------------------------------------------------>
 
                         <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
 
@@ -33,7 +33,7 @@
 
 
 
-                                <li class="nav-item"><a asp-controller="Logins" asp-action="Index" class="nav-link text-white p-2 mb-2 sidebar-link-entrar"><i class="fas fa-file-alt text-light fa-lg mr-3"></i> Entrar</a></li>
+                                <li class="nav-item"><a href="{{url_for('login_index')}}" class="nav-link text-white p-2 mb-2 sidebar-link-entrar"><i class="fas fa-file-alt text-light fa-lg mr-3"></i> Entrar</a></li>
 
 
 
@@ -71,7 +71,7 @@
 
 
 
-                                        <li title="Entrar" class="nav-item ml-md-auto p-2"><a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
+                                        <li title="Sair" class="nav-item ml-md-auto p-2"><a href="{{url_for('sair')}}" class="nav-link" data-toggle="modal" data-target="#sign-out"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

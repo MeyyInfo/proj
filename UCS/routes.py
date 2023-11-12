@@ -2,7 +2,7 @@ from flask import Flask, Response, render_template, redirect, url_for, flash, re
 from UCS import app, database, bcrypt
 from UCS.forms import FormLogin, FormContato
 from UCS.models import Login, Contato
-from flask_login import login_user, logout_user, current_user, login_required
+#from flask_login import login_user, logout_user, current_user, login_required
 import pandas as pd
 import io
 import json
@@ -26,7 +26,7 @@ def contato_index():
 
 
 @app.route('/contato/create', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def contato_create():
     form = FormContato()
     if form.validate_on_submit():
@@ -38,7 +38,7 @@ def contato_create():
 
 
 @app.route('/contato/delete/<row_id>', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def contato_delete(row_id):
     form = FormContato()
     contato = Contato.query.get(row_id)
@@ -50,7 +50,7 @@ def contato_delete(row_id):
 
 
 @app.route('/contato/details/<row_id>')
-@login_required
+#@login_required
 def contato_details(row_id):
     form = FormContato()
     contato = Contato.query.get(row_id)
@@ -58,7 +58,7 @@ def contato_details(row_id):
 
 
 @app.route('/contato/edit/<row_id>', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def contato_edit(row_id):
     form = FormContato()
     contato = Contato.query.get(row_id)
@@ -80,7 +80,7 @@ def contato_edit(row_id):
 
 
 @app.route('/contato/list')
-@login_required
+#@login_required
 def contato_list():
     form = FormContato()
     list_contatos = Contato.query.all()
@@ -88,7 +88,7 @@ def contato_list():
 
 
 @app.route('/contato/list_estatica')
-@login_required
+#@login_required
 def contato_list_estatica():
     form = FormContato()
     list_contatos = Contato.query.all()
@@ -98,7 +98,7 @@ def contato_list_estatica():
 
 
 @app.route('/list/contato_exportardados_excel', methods=['GET'])
-@login_required
+#@login_required
 def contato_exportardados_excel():
     list_contatos_objetos = Contato.query.all()
     list_contatos_json = [contato.to_json() for contato in list_contatos_objetos]
@@ -137,7 +137,7 @@ def login_index():
         if login_usuario:
             # (login_usuario.senha, form.senha.data) verifica se são iguais
             if bcrypt.check_password_hash(login_usuario.senha, form.senha.data):
-                login_user(login_usuario)
+                #login_user(login_usuario)
                 return redirect(url_for('contato_list'))
             else:
                 mensagem = True
@@ -147,16 +147,16 @@ def login_index():
 
 
 @app.route('/sair')
-@login_required
+#@login_required
 def sair():
-    logout_user()
+    #logout_user()
     return redirect(url_for('home'))
 
 
 
 
 @app.route('/login/create', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def login_create():
     form = FormLogin()
     mensagem = False
@@ -176,7 +176,7 @@ def login_create():
 
 
 @app.route('/login/delete/<row_id>', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def login_delete(row_id):
     form = FormLogin()
     login = Login.query.get(row_id)
@@ -189,7 +189,7 @@ def login_delete(row_id):
 
 
 @app.route('/login/edit/<row_id>', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def login_edit(row_id):
     form = FormLogin()
     login = Login.query.get(row_id)
@@ -205,7 +205,7 @@ def login_edit(row_id):
 
 
 @app.route('/login/list')
-@login_required
+#@login_required
 def login_list():
     form= FormLogin()
     list_login = Login.query.all()
@@ -216,115 +216,4 @@ def login_list():
 
 
 
-
-# pratos
-
-@app.route('/pratos/prato1')
-def prato1():
-    return render_template('/pratos/prato1.html')
-
-
-@app.route('/pratos/prato2')
-def prato2():
-    return render_template('/pratos/prato2.html')
-
-
-@app.route('/pratos/prato3')
-def prato3():
-    return render_template('/pratos/prato3.html')
-
-
-@app.route('/pratos/prato4')
-def prato4():
-    return render_template('/pratos/prato4.html')
-
-
-@app.route('/pratos/prato5')
-def prato5():
-    return render_template('/pratos/prato5.html')
-
-
-@app.route('/pratos/prato6')
-def prato6():
-    return render_template('/pratos/prato6.html')
-
-
-@app.route('/pratos/prato7')
-def prato7():
-    return render_template('/pratos/prato7.html')
-
-
-@app.route('/pratos/prato8')
-def prato8():
-    return render_template('/pratos/prato8.html')
-
-
-@app.route('/pratos/prato9')
-def prato9():
-    return render_template('/pratos/prato9.html')
-
-
-@app.route('/pratos/prato10')
-def prato10():
-    return render_template('/pratos/prato10.html')
-
-# fim pratos
-
-
-
-
-# sobremesas
-
-
-@app.route('/sobremesas/sobremesa1')
-def sobremesa1():
-    return render_template('/sobremesas/sobremesa1.html')
-
-
-@app.route('/sobremesas/sobremesa2')
-def sobremesa2():
-    return render_template('/sobremesas/sobremesa2.html')
-
-
-@app.route('/sobremesas/sobremesa3')
-def sobremesa3():
-    return render_template('/sobremesas/sobremesa3.html')
-
-
-@app.route('/sobremesas/sobremesa4')
-def sobremesa4():
-    return render_template('/sobremesas/sobremesa4.html')
-
-
-@app.route('/sobremesas/sobremesa5')
-def sobremesa5():
-    return render_template('/sobremesas/sobremesa5.html')
-
-
-@app.route('/sobremesas/sobremesa6')
-def sobremesa6():
-    return render_template('/sobremesas/sobremesa6.html')
-
-
-@app.route('/sobremesas/sobremesa7')
-def sobremesa7():
-    return render_template('/sobremesas/sobremesa7.html')
-
-
-@app.route('/sobremesas/sobremesa8')
-def sobremesa8():
-    return render_template('/sobremesas/sobremesa8.html')
-
-
-@app.route('/sobremesas/sobremesa9')
-def sobremesa9():
-    return render_template('/sobremesas/sobremesa9.html')
-
-
-@app.route('/sobremesas/sobremesa10')
-def sobremesa10():
-    return render_template('/sobremesas/sobremesa10.html')
-
-
-# fim sobremesas
 
